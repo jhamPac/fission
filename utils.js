@@ -11,6 +11,9 @@ const createDirectoryContents = (currentDirectory, templatePath, name) => {
       const contents = fs.readFileSync(originalPath, 'utf8')
       const writePath = `${currentDirectory}/${name}/${file}`
       fs.writeFileSync(writePath, contents, 'utf8')
+    } else if (stats.isDirectory()) {
+      fs.mkdirSync(`${currentDirectory}/${name}/${file}`)
+      createDirectoryContents(currentDirectory, `${templatePath}/${file}`, `${name}/${file}`)
     }
   })
 }
