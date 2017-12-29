@@ -10,6 +10,10 @@ const createDirectoryContents = (currentDirectory, templatePath, name) => {
     if (stats.isFile()) {
       const contents = fs.readFileSync(originalPath, 'utf8')
       const writePath = `${currentDirectory}/${name}/${file}`
+
+      // rename gitignore
+      if (file === '.npmignore') file = '.gitignore'
+      
       fs.writeFileSync(writePath, contents, 'utf8')
     } else if (stats.isDirectory()) {
       fs.mkdirSync(`${currentDirectory}/${name}/${file}`)
