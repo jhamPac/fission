@@ -10,11 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/jhamPac/fission.git"
   },
-  "keywords": ["generator", "reactjs", "webpack" ],
+  "keywords": [
+    "generator",
+    "reactjs",
+    "webpack"
+  ],
   "author": "jhampac",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jhamPac/fission/issues"
   },
-  "homepage": "https://github.com/jhamPac/fission#readme"
+  "homepage": "https://github.com/jhamPac/fission#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1"
+  }
 }
