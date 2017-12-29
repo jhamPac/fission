@@ -1,2 +1,2 @@
-# fission
+# fission 💥
 Simple React App generator

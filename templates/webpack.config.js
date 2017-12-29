@@ -130,7 +130,6 @@ module.exports = {
     rules: RULES
   },
 
-  // build speed plz
   devtool: isProduction ? 'cheap-module-source-map' : 'source-map',
 
   devServer: {
