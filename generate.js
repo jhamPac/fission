@@ -2,9 +2,12 @@ const fs = require('fs')
 const chalk = require('chalk')
 const ask = require('inquirer')
 
+// user current directory from where they are calling generate
+const CURRENT_DIR = process.cwd()
+
 const QUESTIONS = [
   {
-    name: 'project-name',
+    name: 'projectName',
     type: 'input',
     message: 'What would you like to name this project?:',
     validate: function (input) {
@@ -15,5 +18,11 @@ const QUESTIONS = [
 ]
 
 ask.prompt(QUESTIONS)
-  .then((answers) => console.log(answers))
+  .then((answers) => {
+    let { projectName } = answers
+    let templatePath = `${__dirname}/templates`
+
+    fs.mkdirSync(`${CURRENT_DIR}/${projectName}`)
+
+  })
   .catch((error) => console.log(error))
