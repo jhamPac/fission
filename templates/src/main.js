@@ -9,9 +9,9 @@ const App = () => {
   )
 }
 
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <App />,
     document.getElementById('app')
-  );
-});
+  )
+})
