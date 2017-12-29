@@ -1,6 +1,7 @@
 const fs = require('fs')
 const chalk = require('chalk')
 const ask = require('inquirer')
+const utils = require('./utils')
 
 // user current directory from where they are calling generate
 const CURRENT_DIR = process.cwd()
@@ -23,6 +24,7 @@ ask.prompt(QUESTIONS)
     let templatePath = `${__dirname}/templates`
 
     fs.mkdirSync(`${CURRENT_DIR}/${projectName}`)
+    utils.createDirectoryContents(CURRENT_DIR, templatePath, projectName);
 
   })
   .catch((error) => console.log(error))
