@@ -3,6 +3,7 @@
 const fs = require('fs')
 const ask = require('inquirer')
 const utils = require('./utils')
+const winston = require('winston')
 
 // user current directory from where they are calling generate
 const CURRENT_DIR = process.cwd()
@@ -26,6 +27,5 @@ ask.prompt(QUESTIONS)
 
     fs.mkdirSync(`${CURRENT_DIR}/${projectName}`)
     utils.createDirectoryContents(CURRENT_DIR, templatePath, projectName);
-
   })
-  .catch(error => console.log(error))
+  .catch(error => winston.log('error', 'Error occured in ask.prompt', { message: error.toString() }))
