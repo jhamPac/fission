@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const fs = require('fs')
-const chalk = require('chalk')
 const ask = require('inquirer')
 const utils = require('./utils')
 

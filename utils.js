@@ -23,5 +23,5 @@ const createDirectoryContents = (currentDirectory, templatePath, name) => {
 }
 
 module.exports = {
-  createDirectoryContents
+  createDirectoryContents,
 }

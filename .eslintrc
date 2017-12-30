@@ -4,7 +4,9 @@
       "browser": true,
       "node": true
   },
+  "extends": "airbnb",
   "rules": {
-      "quotes": [2, "single"]
-  }
+        "semi": 0,
+        "no-param-reassign": 0,
+    }
 }
