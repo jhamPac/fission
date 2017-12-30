@@ -26,5 +26,9 @@
   "homepage": "https://github.com/jhamPac/fission#readme",
   "dependencies": {
     "inquirer": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.1.2",
+    "eslint": "^4.14.0"
   }
 }
