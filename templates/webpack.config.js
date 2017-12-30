@@ -123,7 +123,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: DISTPATH,
-    publicPath: '/'
+    publicPath: ''
   },
 
   module: {
@@ -135,7 +135,7 @@ module.exports = {
   devServer: {
     contentBase: DISTPATH,
     hot: true,
-    publicPath: '/',
+    publicPath: '',
     stats: 'errors-only'
   },
 

@@ -4,7 +4,10 @@
   "description": "",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf ./dist/*",
+    "build": "npm run clean && NODE_ENV=production webpack --progress -p",
+    "start": "webpack-dev-server --progress --open"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,7 @@
     "autoprefixer": "*",
     "babel-core": "*",
     "babel-loader": "*",
+    "babel-polyfill": "*",
     "babel-preset-env": "*",
     "babel-preset-es2015": "*",
     "babel-preset-react": "*",
@@ -37,6 +41,7 @@
     "react-hot-loader": "*",
     "react-router": "*",
     "resolve-url-loader": "*",
+    "rimraf": "*",
     "sass-loader": "*",
     "sass-resources-loader": "*",
     "style-loader": "*",
