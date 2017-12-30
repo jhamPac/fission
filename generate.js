@@ -12,20 +12,20 @@ const QUESTIONS = [
     name: 'projectName',
     type: 'input',
     message: 'What would you like to name this project?:',
-    validate: function (input) {
+    validate(input) {
       if (/^([A-Za-z\-\_\d])+$/.test(input)) return true
-      else return 'Project name may only include letters, numbers, underscores and hashes.'
-    }
-  }
+      return 'Project name may only include letters, numbers, underscores and hashes.'
+    },
+  },
 ]
 
 ask.prompt(QUESTIONS)
   .then((answers) => {
-    let { projectName } = answers
-    let templatePath = `${__dirname}/templates`
+    const { projectName } = answers
+    const templatePath = `${__dirname}/templates`
 
     fs.mkdirSync(`${CURRENT_DIR}/${projectName}`)
     utils.createDirectoryContents(CURRENT_DIR, templatePath, projectName);
 
   })
-  .catch((error) => console.log(error))
+  .catch(error => console.log(error))
