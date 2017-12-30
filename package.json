@@ -1,13 +1,14 @@
 {
   "name": "fission",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple React App generator",
   "main": "generate.js",
   "bin": {
     "fission": "./generate.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint generate.js utils.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,15 @@
   },
   "homepage": "https://github.com/jhamPac/fission#readme",
   "dependencies": {
-    "inquirer": "^4.0.1"
+    "inquirer": "^4.0.1",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.1.2",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1"
   }
 }

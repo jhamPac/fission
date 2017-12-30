@@ -13,7 +13,7 @@ const createDirectoryContents = (currentDirectory, templatePath, name) => {
 
       // rename gitignore
       if (file === '.npmignore') file = '.gitignore'
-      
+
       fs.writeFileSync(writePath, contents, 'utf8')
     } else if (stats.isDirectory()) {
       fs.mkdirSync(`${currentDirectory}/${name}/${file}`)
@@ -23,5 +23,5 @@ const createDirectoryContents = (currentDirectory, templatePath, name) => {
 }
 
 module.exports = {
-  createDirectoryContents
+  createDirectoryContents,
 }
