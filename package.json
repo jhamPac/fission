@@ -7,7 +7,8 @@
     "fission": "./generate.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "eslint generate.js utils.js"
   },
   "repository": {
