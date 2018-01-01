@@ -9,7 +9,8 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint generate.js utils.js"
+    "lint": "eslint generate.js utils.js",
+    "createDoc": "jsdoc2md utils.js"
   },
   "repository": {
     "type": "git",
@@ -41,6 +42,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
-    "jest": "^22.0.4"
+    "jest": "^22.0.4",
+    "jsdoc-to-markdown": "^3.0.3"
   }
 }
