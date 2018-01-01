@@ -1,5 +1,4 @@
 # Documentation 📄
-***
 
 ## Utils.js
 
