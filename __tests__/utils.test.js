@@ -1,5 +1,4 @@
 import { createDirectoryContents } from '../utils'
-import fs from 'fs'
 jest.mock('fs')
 
 describe('Utility functions', () => {
